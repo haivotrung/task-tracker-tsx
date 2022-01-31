@@ -1,12 +1,19 @@
+import { useLocation } from "react-router-dom";
 import Button from "./Button";
 
-const Header = ({onAdd, showAdd }) => {
+const Header = ({ onAdd, showAdd }) => {
+    const location = useLocation();
+
     return (
         <header className='header'>
             <h1>Task Tracker</h1>
-            <Button color={showAdd ? 'darkred' :'green'}
-                text={showAdd ? 'Close' : 'Add'}
-                onclick={onAdd} />
+            {location.pathname === '/' && (
+                <Button
+                    color={showAdd ? 'red' : 'green'}
+                    text={showAdd ? 'Close' : 'Add'}
+                    onclick={onAdd}
+                />
+            )}
         </header>
     )
 };
