@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
-const AddTask = (onAdd) => {
+const AddTask = ({onAdd}) => {
     const [text, setText] = useState('')
-    const [day, setDay] = useState('')
+    const [day, setDay] = useState('');
     const [reminder, setReminder] = useState(false)
 
     const onSubmit = (e) => {
@@ -37,7 +37,9 @@ const AddTask = (onAdd) => {
                     type='datetime-local'
                     placeholder='Add Day & Time'
                     value={day}
-                    onChange={(e) => setDay(e.target.value)}
+                    onChange={(e) =>
+                        setDay(e.target.value)
+                    }
                 />
             </div>
             <div className='form-control form-control-check'>

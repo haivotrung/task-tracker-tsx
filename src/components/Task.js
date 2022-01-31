@@ -1,4 +1,5 @@
 import { FaTimes } from 'react-icons/fa'
+import Moment from 'moment';
 
 const Task = ({ task, onDelete, onToggle }) => {
     return (
@@ -7,9 +8,9 @@ const Task = ({ task, onDelete, onToggle }) => {
       onDoubleClick={() => onToggle(task.id)}
         >   
             <h3>{task.text}
-                <FaTimes style={{ color: 'pink' }}
+                <FaTimes style={{color: 'red'}}
                     onClick={() => onDelete(task.id)} /></h3>
-            <p>{task.day}</p>
+            <p>{Moment(task.day).calendar()}</p>
         </div>
     )
 }
