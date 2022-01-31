@@ -1,7 +1,8 @@
+import { ReactEventHandler } from "react";
 import { useLocation } from "react-router-dom";
 import Button from "./Button";
 
-const Header = ({ onAdd, showAdd }) => {
+const Header = ({ onAdd, showAdd }: { onAdd: ReactEventHandler<HTMLButtonElement>, showAdd: boolean }) => {
     const location = useLocation();
 
     return (
@@ -17,6 +18,5 @@ const Header = ({ onAdd, showAdd }) => {
         </header>
     )
 };
-
 
 export default Header;

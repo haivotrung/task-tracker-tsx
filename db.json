@@ -1,12 +1,6 @@
 {
   "tasks": [
     {
-      "text": "Hello Sydney",
-      "day": "2022-02-03T20:54",
-      "reminder": true,
-      "id": 1
-    },
-    {
       "text": "Say Hi",
       "day": "2022-02-01T20:03",
       "reminder": false,
@@ -23,6 +17,18 @@
       "day": "2022-05-16T17:15",
       "reminder": false,
       "id": 4
+    },
+    {
+      "text": "Hello",
+      "day": "2022-01-31T20:48",
+      "reminder": false,
+      "id": 5
+    },
+    {
+      "text": "Test TypeScript",
+      "day": "2022-02-15T18:03",
+      "reminder": true,
+      "id": 6
     }
   ]
 }
