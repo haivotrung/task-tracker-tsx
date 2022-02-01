@@ -22,13 +22,13 @@ function App() {
 
   useEffect(() => {
     const getTasks = async () => {
-      const tasksFromServer = await fetchTasks();
+      const tasksFromServer = await fetchTasksArray();
       setTasks(tasksFromServer);
     }
     getTasks();
   }, [])
 
-  const fetchTasks = async () => {
+  const fetchTasksArray = async () => {
     const res = await fetch(`http://localhost:5000/tasks/`);
     return await res.json();
   }
